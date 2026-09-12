@@ -25,11 +25,11 @@ export default function InstagramSection(){
   const posts = STATIC_POSTS
 
   return (
-    <section id="instagram" className="instagram-clean-section" style={{background:'#080808', borderTop:'1px solid #ffffff14', borderBottom:'1px solid #ffffff14'}}>
+    <section id="instagram" className="instagram-clean-section">
       <div className="site-shell">
         <div className="reveal" style={{marginBottom:8}}>
-          <p className="section-kicker" style={{color:'#9b9ba3'}}>NO INSTAGRAM</p>
-          <h2 style={{fontSize:'clamp(2.2rem, 4.5vw, 3.4rem)', fontWeight:800, letterSpacing:'-.03em', marginTop:12, lineHeight:0.95, color:'#f5f5f7'}}>
+          <p className="section-kicker">NO INSTAGRAM</p>
+          <h2 style={{fontSize:'clamp(2.2rem, 4.5vw, 3.4rem)', fontWeight:800, letterSpacing:'-.03em', marginTop:12, lineHeight:0.95}}>
             Acompanhe a<br />JK IMPORTS de perto.
           </h2>
         </div>
@@ -38,8 +38,8 @@ export default function InstagramSection(){
           {/* COLUNA ESQUERDA - perfil fiel ao Instagram real */}
           <div style={{display:'grid', gap:16, alignContent:'start'}}>
             <div style={{display:'flex', gap:16, alignItems:'center'}}>
-              <div style={{width:96,height:96,minWidth:96,borderRadius:999,padding:3,background:'linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5)', display:'grid',placeItems:'center'}}>
-                <div style={{width:'100%',height:'100%',borderRadius:999,background:'#080808',padding:3,display:'grid',placeItems:'center'}}>
+              <a href="https://www.instagram.com/jk_importds" target="_blank" rel="noopener noreferrer" aria-label="Abrir Instagram da JK Imports" style={{width:96,height:96,minWidth:96,borderRadius:999,padding:3,background:'linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5)', display:'grid',placeItems:'center', flexShrink:0, transition:'opacity .18s, transform .18s'}} onMouseEnter={e=>{e.currentTarget.style.opacity='0.92'; e.currentTarget.style.transform='scale(1.02)'}} onMouseLeave={e=>{e.currentTarget.style.opacity='1'; e.currentTarget.style.transform='scale(1)'}}>
+                <div style={{width:'100%',height:'100%',borderRadius:999,background:'var(--site-bg)',padding:3,display:'grid',placeItems:'center'}}>
                   <img
                     src={INSTAGRAM_AVATAR_LOGO}
                     alt="jk_importds"
@@ -49,45 +49,45 @@ export default function InstagramSection(){
                       borderRadius:999,
                       objectFit:'cover',
                       objectPosition:'center',
-                      background:'#0a0a0a',
+                      background:'var(--site-bg)',
                       display:'block',
-                      border:'2px solid #080808'
+                      border:'2px solid var(--site-bg)'
                     }}
                     loading="lazy"
                     onError={e=>{ e.currentTarget.src = INSTAGRAM_AVATAR_LOGO }}
                   />
                 </div>
-              </div>
+              </a>
               <div style={{minWidth:0, display:'grid', gap:4}}>
                 <div style={{display:'flex', alignItems:'center', gap:8, flexWrap:'wrap'}}>
-                  <span style={{fontWeight:800, fontSize:18, color:'#f5f5f7', lineHeight:1.1, letterSpacing:'-.01em'}}>jk_importds</span>
+                  <a href="https://www.instagram.com/jk_importds" target="_blank" rel="noopener noreferrer" style={{fontWeight:800, fontSize:18, color:'var(--site-text)', lineHeight:1.1, letterSpacing:'-.01em', textDecoration:'none', transition:'opacity .18s'}} onMouseEnter={e=>e.currentTarget.style.opacity='0.75'} onMouseLeave={e=>e.currentTarget.style.opacity='1'}>jk_importds</a>
                   <VerifiedBadge />
                 </div>
-                <p style={{color:'#f5f5f7', fontSize:14, fontWeight:600, lineHeight:1.2}}>JK / IMPERATRIZ E REGIÃO 💙📲</p>
+                <p style={{color:'var(--site-text)', fontSize:14, fontWeight:600, lineHeight:1.2}}>JK / IMPERATRIZ E REGIÃO 💙📲</p>
               </div>
             </div>
 
-            <div style={{display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:8, textAlign:'center', padding:'16px 0', borderTop:'1px solid #ffffff14', borderBottom:'1px solid #ffffff14'}}>
+            <div style={{display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:8, textAlign:'center', padding:'16px 0', borderTop:'1px solid var(--site-border)', borderBottom:'1px solid var(--site-border)'}}>
               <div>
-                <strong style={{display:'block', fontSize:16, color:'#f5f5f7', fontWeight:800, lineHeight:1.1}}>1.415</strong>
-                <span style={{fontSize:13, color:'#a0a0a8', fontWeight:400}}>posts</span>
+                <strong style={{display:'block', fontSize:16, color:'var(--site-text)', fontWeight:800, lineHeight:1.1}}>1.415</strong>
+                <span style={{fontSize:13, color:'var(--site-muted)', fontWeight:400}}>posts</span>
               </div>
               <div>
-                <strong style={{display:'block', fontSize:16, color:'#f5f5f7', fontWeight:800, lineHeight:1.1}}>30,3 mil</strong>
-                <span style={{fontSize:13, color:'#a0a0a8', fontWeight:400}}>seguidores</span>
+                <strong style={{display:'block', fontSize:16, color:'var(--site-text)', fontWeight:800, lineHeight:1.1}}>30,3 mil</strong>
+                <span style={{fontSize:13, color:'var(--site-muted)', fontWeight:400}}>seguidores</span>
               </div>
               <div>
-                <strong style={{display:'block', fontSize:16, color:'#f5f5f7', fontWeight:800, lineHeight:1.1}}>7.521</strong>
-                <span style={{fontSize:13, color:'#a0a0a8', fontWeight:400}}>seguindo</span>
+                <strong style={{display:'block', fontSize:16, color:'var(--site-text)', fontWeight:800, lineHeight:1.1}}>7.521</strong>
+                <span style={{fontSize:13, color:'var(--site-muted)', fontWeight:400}}>seguindo</span>
               </div>
             </div>
 
             <div style={{display:'grid', gap:3, paddingTop:2}}>
-              <p style={{fontSize:14, lineHeight:1.5, color:'#f5f5f7', fontWeight:700}}>PERFIL ÚNICO 💙</p>
-              <p style={{fontSize:14, lineHeight:1.5, color:'#f5f5f7'}}>• A loja que mais vende celulares💙</p>
-              <p style={{fontSize:14, lineHeight:1.5, color:'#f5f5f7'}}>📍Loja física em Imperatriz</p>
-              <p style={{fontSize:14, lineHeight:1.5, color:'#f5f5f7'}}>🚨OFERTAS NOS STORIES🚨</p>
-              <p style={{fontSize:14, lineHeight:1.5, color:'#f5f5f7'}}>• Nosso WhatsApp:👇🏻</p>
+              <p style={{fontSize:14, lineHeight:1.5, color:'var(--site-text)', fontWeight:700}}>PERFIL ÚNICO 💙</p>
+              <p style={{fontSize:14, lineHeight:1.5, color:'var(--site-text)'}}>• A loja que mais vende celulares💙</p>
+              <p style={{fontSize:14, lineHeight:1.5, color:'var(--site-text)'}}>📍Loja física em Imperatriz</p>
+              <p style={{fontSize:14, lineHeight:1.5, color:'var(--site-text)'}}>🚨OFERTAS NOS STORIES🚨</p>
+              <p style={{fontSize:14, lineHeight:1.5, color:'var(--site-text)'}}>• Nosso WhatsApp:👇🏻</p>
             </div>
 
             <a href="https://www.instagram.com/jk_importds" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{justifyContent:'center', textDecoration:'none', marginTop:10, background:'#0095f6', borderColor:'#0095f6'}}>Seguir no Instagram</a>
@@ -99,7 +99,7 @@ export default function InstagramSection(){
               const isPinned = idx === 0 || idx === 1 || idx === 2
               const isAlbum = idx === 3 || idx === 5
               return (
-                <a key={p.id} href={p.permalink} target="_blank" rel="noopener" className="ig-tile" aria-label={`Abrir post no Instagram`} style={{position:'relative', borderColor:'#ffffff14'}}>
+                <a key={p.id} href={p.permalink} target="_blank" rel="noopener" className="ig-tile" aria-label={`Abrir post no Instagram`} style={{position:'relative'}}>
                   <img src={p.image} alt={p.alt} loading="lazy" style={{objectPosition:'center'}} onError={e=>{e.currentTarget.style.display='none'}} />
                   {isPinned && (
                     <span aria-hidden="true" style={{position:'absolute', top:8, right:8, color:'#fff', filter:'drop-shadow(0 1px 3px rgba(0,0,0,0.7))', lineHeight:0}}>
