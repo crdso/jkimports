@@ -1,0 +1,18 @@
+{
+  "username": "jk_importds",
+  "fullName": "JK IMPORTS",
+  "profilePic": "",
+  "postsCount": 6,
+  "followers": 3200,
+  "following": 180,
+  "bio": "Loja de celulares\nTecnologia para você e sua família 💙\nCelulares • Acessórios • Assistência Técnica\nFale com a JK no link",
+  "profileUrl": "https://www.instagram.com/jk_importds",
+  "posts": [
+    { "id": "1", "image": "/instagram/01.jpg", "permalink": "https://www.instagram.com/jk_importds", "type": "image", "alt": "JK IMPORTS feed 01" },
+    { "id": "2", "image": "/instagram/02.jpg", "permalink": "https://www.instagram.com/jk_importds", "type": "image", "alt": "JK IMPORTS feed 02" },
+    { "id": "3", "image": "/instagram/03.jpg", "permalink": "https://www.instagram.com/jk_importds", "type": "image", "alt": "JK IMPORTS feed 03" },
+    { "id": "4", "image": "/instagram/04.jpg", "permalink": "https://www.instagram.com/jk_importds", "type": "image", "alt": "JK IMPORTS feed 04" },
+    { "id": "5", "image": "/instagram/05.jpg", "permalink": "https://www.instagram.com/jk_importds", "type": "image", "alt": "JK IMPORTS feed 05" },
+    { "id": "6", "image": "/instagram/06.jpg", "permalink": "https://www.instagram.com/jk_importds", "type": "image", "alt": "JK IMPORTS feed 06" }
+  ]
+}
