@@ -82,18 +82,17 @@
 .assist-btn-secondary{ background: var(--site-panel); border-color: var(--site-border); color: var(--site-text); }
 
 .assist-hero-media{
-  margin: 0 auto;
-  width: 100%;
-  max-width: 560px;
-  height: auto;
-  aspect-ratio: auto;
+  margin: 0;
+  width: 350px;
+  height: 233.328px;
   border-radius: 8px;
   border: 1px solid var(--site-border);
   background: var(--site-panel);
   overflow: hidden;
+  aspect-ratio: 3 / 2;
   order: -1;
 }
-.assist-hero-media img{ width:100%; height:auto; object-fit:contain; object-position:center; display:block; }
+.assist-hero-media img{ width:100%; height:100%; object-fit:cover; object-position:50% 50%; display:block; }
 
 /* ========== BODY — SECTION.seo-body.site-shell ========== */
 .assist-body{
@@ -161,7 +160,7 @@
 /* ========== 440 ========== */
 @media (min-width: 440px){
   .assist-hero-grid{ grid-template-columns:400px; }
-  .assist-hero-media{ width:100%; max-width:560px; height:auto; aspect-ratio:auto; }
+  .assist-hero-media{ width:400px; height:266.656px; }
   .assist-hero-copy h1{ font-size:52.8px; line-height:51.744px; }
   .assist-body{ grid-template-columns:400px; }
   .assist-article{ width:400px; }
@@ -174,11 +173,11 @@
   .assist-hero{ padding:64.88px 0 48.66px; }
   .assist-hero-grid{
     grid-template-columns:732px;
-    grid-template-rows:auto auto;
+    grid-template-rows:488px 332.891px;
     gap:48.66px;
     padding:0 32px;
   }
-  .assist-hero-media{ width:100%; max-width:560px; height:auto; aspect-ratio:auto; order:-1; margin:0 auto; }
+  .assist-hero-media{ width:732px; height:488px; order:-1; }
   .assist-hero-copy{ width:732px; }
   .assist-hero-copy h1{ font-size:44.605px; line-height:43.7129px; }
   .assist-lead{ width:672px; }
@@ -206,12 +205,10 @@
   }
   .assist-hero-media{
     width:100%;
-    max-width:520px;
     height:auto;
-    aspect-ratio:auto;
+    aspect-ratio:3/2;
     order:0;
-    margin:0 auto;
-    align-self:center;
+    margin-top: 14px;
   }
   .assist-hero-copy{ width:auto; min-width:0; }
   .assist-hero-copy h1{ font-size: clamp(42px, 4vw, 56px); line-height:0.98; }
