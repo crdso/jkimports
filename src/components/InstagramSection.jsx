@@ -1,6 +1,4 @@
-import { useEffect, useState } from 'react'
 import { Pin, Copy } from 'lucide-react'
-import fallback from '../data/instagramFallback.json'
 
 const INSTAGRAM_AVATAR_LOGO = '/logo-jk.png'
 
@@ -13,117 +11,95 @@ const STATIC_POSTS = [
   { id: 'jk06', image: '/instagram/06.jpg', permalink: 'https://www.instagram.com/jk_importds', alt: 'JK IMPORTS feed 06' },
 ]
 
+function VerifiedBadge(){
+  return (
+    <span aria-label="Verificado" title="Verificado" style={{display:'inline-grid',placeItems:'center',width:18,height:18,borderRadius:999,background:'#0095f6',flexShrink:0}}>
+      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M6 12.5l4 4 8-9" stroke="white" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    </span>
+  )
+}
+
 export default function InstagramSection(){
-  const [data,setData]=useState(fallback)
-  const [loading,setLoading]=useState(true)
-
-  useEffect(()=>{
-    let cancelled=false
-    async function load(){
-      try{
-        const res = await fetch('/.netlify/functions/instagram', { headers:{Accept:'application/json'} })
-        if(!res.ok) throw new Error('no function')
-        const json = await res.json()
-        if(json && json.username && Array.isArray(json.posts) && !cancelled){
-          setData(json)
-        }
-      }catch{
-      } finally {
-        if(!cancelled) setLoading(false)
-      }
-    }
-    const t = setTimeout(load, 300)
-    return ()=>{ cancelled=true; clearTimeout(t); setLoading(false) }
-  },[])
-
   const posts = STATIC_POSTS
 
   return (
-    <section id="instagram" className="instagram-clean-section">
+    <section id="instagram" className="instagram-clean-section" style={{background:'#080808', borderTop:'1px solid #ffffff14', borderBottom:'1px solid #ffffff14'}}>
       <div className="site-shell">
-        <div className="reveal">
-          <p className="section-kicker">NO INSTAGRAM</p>
-          <h2 style={{fontSize:'clamp(2.2rem, 4.5vw, 3.4rem)', fontWeight:800, letterSpacing:'-.03em', marginTop:12, lineHeight:0.95}}>
+        <div className="reveal" style={{marginBottom:8}}>
+          <p className="section-kicker" style={{color:'#9b9ba3'}}>NO INSTAGRAM</p>
+          <h2 style={{fontSize:'clamp(2.2rem, 4.5vw, 3.4rem)', fontWeight:800, letterSpacing:'-.03em', marginTop:12, lineHeight:0.95, color:'#f5f5f7'}}>
             Acompanhe a<br />JK IMPORTS de perto.
           </h2>
         </div>
 
         <div className="ig-profile-card reveal" style={{marginTop:'2.5rem'}}>
-          {/* COLUNA ESQUERDA - perfil solto, sem card externo */}
-          <div style={{display:'grid', gap:18, alignContent:'start'}}>
+          {/* COLUNA ESQUERDA - perfil fiel ao Instagram real */}
+          <div style={{display:'grid', gap:16, alignContent:'start'}}>
             <div style={{display:'flex', gap:16, alignItems:'center'}}>
-              {(() => {
-                const isLogo = !data.profilePic || data.profilePic.includes('logo-')
-                const src = isLogo ? INSTAGRAM_AVATAR_LOGO : data.profilePic
-                return (
+              <div style={{width:96,height:96,minWidth:96,borderRadius:999,padding:3,background:'linear-gradient(45deg,#feda75,#fa7e1e,#d62976,#962fbf,#4f5bd5)', display:'grid',placeItems:'center'}}>
+                <div style={{width:'100%',height:'100%',borderRadius:999,background:'#080808',padding:3,display:'grid',placeItems:'center'}}>
                   <img
-                    src={src}
-                    alt={data.username}
-                    className="ig-avatar"
+                    src={INSTAGRAM_AVATAR_LOGO}
+                    alt="jk_importds"
                     style={{
-                      width:96,
-                      height:96,
-                      minWidth:96,
+                      width:'100%',
+                      height:'100%',
                       borderRadius:999,
-                      objectFit: isLogo ? 'contain' : 'cover',
+                      objectFit:'cover',
+                      objectPosition:'center',
                       background:'#0a0a0a',
-                      border:'3px solid var(--site-border)',
-                      padding: isLogo ? 10 : 0
+                      display:'block',
+                      border:'2px solid #080808'
                     }}
                     loading="lazy"
-                    onError={e=>{ e.currentTarget.src = INSTAGRAM_AVATAR_LOGO; e.currentTarget.style.background='#0a0a0a'; e.currentTarget.style.objectFit='contain'; e.currentTarget.style.padding='10px' }}
+                    onError={e=>{ e.currentTarget.src = INSTAGRAM_AVATAR_LOGO }}
                   />
-                )
-              })()}
-              <div>
-                <p style={{fontWeight:800, fontSize:15, color:'var(--site-text)', lineHeight:1.2}}>@{data.username}</p>
-                <p style={{color:'var(--site-muted)', fontSize:13, marginTop:2}}>{data.fullName}</p>
+                </div>
+              </div>
+              <div style={{minWidth:0, display:'grid', gap:4}}>
+                <div style={{display:'flex', alignItems:'center', gap:8, flexWrap:'wrap'}}>
+                  <span style={{fontWeight:800, fontSize:18, color:'#f5f5f7', lineHeight:1.1, letterSpacing:'-.01em'}}>jk_importds</span>
+                  <VerifiedBadge />
+                </div>
+                <p style={{color:'#f5f5f7', fontSize:14, fontWeight:600, lineHeight:1.2}}>JK / IMPERATRIZ E REGIÃO 💙📲</p>
               </div>
             </div>
 
-            <div style={{display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:8, textAlign:'center', padding:'14px 0', borderTop:'1px solid var(--site-border)', borderBottom:'1px solid var(--site-border)'}}>
-              <div><strong style={{display:'block', fontSize:15, color:'var(--site-text)', fontWeight:800}}>{loading ? '—' : data.postsCount}</strong><span style={{fontSize:11,color:'var(--site-muted)'}}>publicações</span></div>
-              <div><strong style={{display:'block', fontSize:15, color:'var(--site-text)', fontWeight:800}}>{loading ? '—' : (data.followers >= 1000 ? (data.followers/1000).toFixed(1).replace('.0','').replace('.',',') + ' mil' : data.followers)}</strong><span style={{fontSize:11,color:'var(--site-muted)'}}>seguidores</span></div>
-              <div><strong style={{display:'block', fontSize:15, color:'var(--site-text)', fontWeight:800}}>{loading ? '—' : data.following.toLocaleString('pt-BR')}</strong><span style={{fontSize:11,color:'var(--site-muted)'}}>seguindo</span></div>
+            <div style={{display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:8, textAlign:'center', padding:'16px 0', borderTop:'1px solid #ffffff14', borderBottom:'1px solid #ffffff14'}}>
+              <div>
+                <strong style={{display:'block', fontSize:16, color:'#f5f5f7', fontWeight:800, lineHeight:1.1}}>1.415</strong>
+                <span style={{fontSize:13, color:'#a0a0a8', fontWeight:400}}>posts</span>
+              </div>
+              <div>
+                <strong style={{display:'block', fontSize:16, color:'#f5f5f7', fontWeight:800, lineHeight:1.1}}>30,3 mil</strong>
+                <span style={{fontSize:13, color:'#a0a0a8', fontWeight:400}}>seguidores</span>
+              </div>
+              <div>
+                <strong style={{display:'block', fontSize:16, color:'#f5f5f7', fontWeight:800, lineHeight:1.1}}>7.521</strong>
+                <span style={{fontSize:13, color:'#a0a0a8', fontWeight:400}}>seguindo</span>
+              </div>
             </div>
 
-            {(() => {
-              const raw = data.bio || fallback.bio || ''
-              const lines = raw.split('\n').map(s=>s.trim()).filter(Boolean)
-              const category = lines[0] || 'Loja de celulares'
-              const bodyLines = lines.slice(1)
-              return (
-                <>
-                  <p style={{fontSize:13, lineHeight:1.4, color:'var(--site-faint)', letterSpacing:'0.01em'}}>{category}</p>
-                  <div style={{display:'grid', gap:2, marginTop:2}}>
-                    {bodyLines.map((l,i)=> (
-                      <p key={i} style={{fontSize:14, lineHeight:1.55, color:'var(--site-text)', whiteSpace:'pre-line', fontWeight: i===0 ? 400 : 400}}>{l}</p>
-                    ))}
-                  </div>
-                  <div style={{display:'grid', gap:6, marginTop:10}}>
-                    <a href="https://www.instagram.com/jk_importds" target="_blank" rel="noopener noreferrer" style={{display:'inline-flex', alignItems:'center', gap:6, fontSize:14, fontWeight:600, color:'#0095f6', textDecoration:'none'}}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-                      instagram.com/jk_importds
-                    </a>
-                    <span style={{display:'inline-flex', alignItems:'center', gap:6, fontSize:14, color:'var(--site-text)'}}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M16 8h.01"/><path d="M12 2a10 10 0 0 1 10 10"/><path d="M2 12a10 10 0 0 1 10-10"/></svg>
-                      jk_importds
-                    </span>
-                  </div>
-                </>
-              )
-            })()}
+            <div style={{display:'grid', gap:3, paddingTop:2}}>
+              <p style={{fontSize:14, lineHeight:1.5, color:'#f5f5f7', fontWeight:700}}>PERFIL ÚNICO 💙</p>
+              <p style={{fontSize:14, lineHeight:1.5, color:'#f5f5f7'}}>• A loja que mais vende celulares💙</p>
+              <p style={{fontSize:14, lineHeight:1.5, color:'#f5f5f7'}}>📍Loja física em Imperatriz</p>
+              <p style={{fontSize:14, lineHeight:1.5, color:'#f5f5f7'}}>🚨OFERTAS NOS STORIES🚨</p>
+              <p style={{fontSize:14, lineHeight:1.5, color:'#f5f5f7'}}>• Nosso WhatsApp:👇🏻</p>
+            </div>
 
-            <a href={data.profileUrl} target="_blank" rel="noopener noreferrer" className="btn-primary" style={{justifyContent:'center', textDecoration:'none', marginTop:12}}>Seguir no Instagram</a>
+            <a href="https://www.instagram.com/jk_importds" target="_blank" rel="noopener noreferrer" className="btn-primary" style={{justifyContent:'center', textDecoration:'none', marginTop:10, background:'#0095f6', borderColor:'#0095f6'}}>Seguir no Instagram</a>
           </div>
 
-          {/* COLUNA DIREITA - grade 3x2 — 6 imagens reais de public/instagram em ordem fixada */}
+          {/* COLUNA DIREITA - grade 3x2 — 6 imagens em ordem 01-06 */}
           <div className="ig-grid" style={{alignContent:'start'}}>
             {posts.map((p, idx)=> {
               const isPinned = idx === 0 || idx === 1 || idx === 2
               const isAlbum = idx === 3 || idx === 5
               return (
-                <a key={p.id} href={p.permalink} target="_blank" rel="noopener" className="ig-tile" aria-label={`Abrir post no Instagram`} style={{position:'relative'}}>
+                <a key={p.id} href={p.permalink} target="_blank" rel="noopener" className="ig-tile" aria-label={`Abrir post no Instagram`} style={{position:'relative', borderColor:'#ffffff14'}}>
                   <img src={p.image} alt={p.alt} loading="lazy" style={{objectPosition:'center'}} onError={e=>{e.currentTarget.style.display='none'}} />
                   {isPinned && (
                     <span aria-hidden="true" style={{position:'absolute', top:8, right:8, color:'#fff', filter:'drop-shadow(0 1px 3px rgba(0,0,0,0.7))', lineHeight:0}}>
