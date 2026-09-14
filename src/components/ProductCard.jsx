@@ -21,12 +21,17 @@ function formatDisplayName(raw){
 function isSeminovo(product){
   return product.condition === 'Seminovo'
 }
+function displayCondition(cond){
+  if(cond === 'Seminovo') return 'Seminovo'
+  if(cond === 'Novo') return 'Novo / Lacrado'
+  return cond || ''
+}
 
 export default function ProductCard({ product, onOpen }){
   const logo = '/logo-jk.png'
   const { addItem } = useCart()
   const variant = product.variants?.[0]
-  const inStock = (product.stock||0) > 0 && product.available !== false
+  const inStock = product.available !== false && !product.sold && !product.hidden
   const compare = product.compareAt && product.compareAt > product.price ? product.compareAt : null
   const img = product.foto_url || product.images?.[0] || logo
   const [imageFailed, setImageFailed] = useState(false)
@@ -42,14 +47,16 @@ export default function ProductCard({ product, onOpen }){
     }
     if(inStock) addItem(product, variant, 1)
   }
+  const metaParts = [product.armazenamento, displayCondition(product.condition)].filter(Boolean)
   return (
     <article className="product-card">
       <div className="product-card-media" onClick={()=>onOpen?.(product)} style={{cursor:'pointer'}}>
         <img src={displayedImage} alt={displayName} loading="lazy" onError={()=>setImageFailed(true)} />
       </div>
       <div className="product-card-body">
-        {showSeminovo && <p className="product-status">Seminovo</p>}
+        {showSeminovo ? <p className="product-status">Seminovo</p> : (product.condition === 'Novo' && <p className="product-status" style={{color:'var(--site-muted)'}}>Novo / Lacrado</p>)}
         <h3 className="product-card-title" onClick={()=>onOpen?.(product)} style={{cursor:'pointer'}}>{displayName}</h3>
+        {metaParts.length > 0 && <p className="product-card-meta">{metaParts.join(' • ')}</p>}
         <div className="product-card-price">
           <div>
             {hasPrice ? (

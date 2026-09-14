@@ -11,8 +11,15 @@ import ProductCard from '../components/ProductCard.jsx'
 import GlintDivider from '../components/GlintDivider.jsx'
 import products from '../data/products.json'
 
+const HOME_FEATURED_SLUGS = [
+  'iphone-17-pro-max',
+  'iphone-17-pro',
+  'iphone-16-pro-max',
+  'iphone-15-pro-max',
+]
+
 function FeaturedHomeProducts({ onOpen }){
-  const featured = products.slice(0,4)
+  const featured = HOME_FEATURED_SLUGS.map(slug => products.find(p => p.slug === slug)).filter(Boolean)
   return (
     <section id="produtos" className="products-apple-section">
       <div className="site-shell">

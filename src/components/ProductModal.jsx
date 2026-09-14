@@ -32,17 +32,18 @@ export default function ProductModal({ product, onClose }){
         </div>
         <div style={{padding:20,display:'grid',gap:12,alignContent:'start'}}>
           <div style={{display:'flex',justifyContent:'space-between',alignItems:'start',gap:12}}>
-            <div><p style={{fontSize:11,letterSpacing:'.14em',textTransform:'uppercase',color:'var(--site-muted)',fontWeight:700}}>{product.category}{product.condition ? ` • ${product.condition}` : ''}</p><h3 style={{fontSize:22,fontWeight:800,letterSpacing:'-.02em'}}>{product.name}</h3><p style={{fontSize:13,color:'var(--site-muted)'}}>{[product.armazenamento, product.cor, product.bateria? `Bateria ${product.bateria}`:''].filter(Boolean).join(' • ') || 'Consulte disponibilidade'}</p></div>
+            <div><p style={{fontSize:11,letterSpacing:'.14em',textTransform:'uppercase',color:'var(--site-muted)',fontWeight:700}}>{product.category}{product.condition ? ` • ${product.condition === 'Novo' ? 'Novo / Lacrado' : product.condition}` : ''}</p><h3 style={{fontSize:22,fontWeight:800,letterSpacing:'-.02em'}}>{product.name}</h3><p style={{fontSize:13,color:'var(--site-muted)'}}>{[product.armazenamento, product.cor, product.bateria? `Bateria ${product.bateria}`:''].filter(Boolean).join(' • ') || 'Consulte disponibilidade'}</p></div>
             <button onClick={onClose} style={{width:34,height:34,borderRadius:999,border:'1px solid var(--site-border)',background:'transparent',color:'var(--site-text)',cursor:'pointer'}}>✕</button>
           </div>
           <p style={{fontSize:13,lineHeight:1.6,color:'var(--site-muted)'}}>{product.description || product.short || 'Consulte disponibilidade, cores e condições com a JK IMPORTS via WhatsApp.'}</p>
           <div style={{background:'var(--site-panel-soft)',border:'1px solid var(--site-border)',borderRadius:12,padding:12}}>
             <p style={{fontWeight:700,fontSize:12,letterSpacing:'.08em',textTransform:'uppercase',color:'var(--site-muted)',marginBottom:6}}>Especificações</p>
             <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8,fontSize:13}}>
-              <span>Armazenamento: <strong>{product.armazenamento || 'Consultar'}</strong></span>
-              <span>Cor: <strong>{product.cor||'Consultar'}</strong></span>
-              <span>Condição: <strong>{product.condition || 'Consultar'}</strong></span>
-              <span>Garantia: <strong>{product.garantia || 'Consultar'}</strong></span>
+              {product.armazenamento && <span>Armazenamento: <strong>{product.armazenamento}</strong></span>}
+              {product.cor && <span>Cor: <strong>{product.cor}</strong></span>}
+              <span>Condição: <strong>{product.condition === 'Novo' ? 'Novo / Lacrado' : product.condition || 'Consultar'}</strong></span>
+              {product.garantia && <span>Garantia: <strong>{product.garantia}</strong></span>}
+              {product.bateria && <span>Bateria: <strong>{product.bateria}</strong></span>}
             </div>
           </div>
           <div style={{display:'flex',alignItems:'end',gap:12,flexWrap:'wrap'}}>
