@@ -69,36 +69,36 @@ img{display:block;max-width:100%}
 
 
 /* CINE HERO */
-.miphone-cine{--cine-progress:0;--cine-veil:0;position:relative;height:440svh;background:var(--cine-stage)}
-.miphone-cine-stage{position:sticky;top:0;height:100svh;width:100%;overflow:hidden;background:var(--cine-stage);display:grid;grid-template-columns:minmax(0,34%) minmax(0,66%);align-items:center;isolation:isolate}
-.miphone-cine-frame{grid-column:2;grid-row:1;position:relative;z-index:1;height:100%;min-width:0}
-.miphone-cine-video,.miphone-cine-fallback{display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom;background:var(--cine-stage)}
-.miphone-cine-fallback{position:absolute;inset:0;height:100%;opacity:0;pointer-events:none;transition:opacity .4s ease}
-.miphone-cine[data-mode="static"] .miphone-cine-fallback{opacity:1}
-.miphone-cine[data-mode="static"] .miphone-cine-video{visibility:hidden}
-.miphone-cine-copy{grid-column:1;grid-row:1;position:relative;z-index:3;padding:4.25rem 1.5rem 0 clamp(1.5rem,4.5vw,4.5rem);min-width:0}
-.miphone-cine-kicker{color:var(--cine-faint);font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;display:block}
-.miphone-cine-lines{display:grid;margin-top:1.35rem}
-.miphone-cine-line{grid-area:1/1;margin:0;align-self:center;color:var(--cine-ink);font-size:clamp(1.75rem,2.85vw,3.1rem);line-height:.98;letter-spacing:-.045em;font-weight:800;opacity:0;transform:translate3d(0,12px,0);will-change:opacity,transform}
-.miphone-cine-line em{font-style:normal;color:var(--cine-accent)}
-.miphone-cine-support{margin-top:1.4rem;max-width:30ch;color:var(--cine-muted);font-size:15px;line-height:1.55;opacity:0;transform:translate3d(0,10px,0)}
-.miphone-cine-rail{position:relative;margin-top:2.6rem;width:min(13rem,60%);height:1px;background:var(--cine-rail);overflow:hidden}
-.miphone-cine-rail i{position:absolute;inset:0;display:block;background:var(--cine-accent);transform:scaleX(var(--cine-progress));transform-origin:left center}
-.miphone-cine-status{margin-top:.9rem;color:var(--cine-faint);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;min-height:1rem}
-.miphone-cine-cue{position:absolute;left:50%;bottom:clamp(1.25rem,3.5vh,2.25rem);transform:translate(-50%);z-index:3;display:inline-flex;align-items:center;gap:.55rem;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap;pointer-events:none;color:var(--cine-faint)}
-.miphone-cine-cue span{width:1.5rem;height:1px;background:currentColor;animation:miphoneCineCue 2.4s cubic-bezier(.4,0,.2,1) infinite}
-.miphone-cine-veil{position:absolute;inset:0;z-index:5;background:var(--site-bg);opacity:var(--cine-veil);pointer-events:none;will-change:opacity}
-@keyframes miphoneCineCue{0%,100%{transform:scaleX(.35);opacity:.35}50%{transform:scaleX(1);opacity:1}}
+.jkimports-cine{--cine-progress:0;--cine-veil:0;position:relative;height:440svh;background:var(--cine-stage)}
+.jkimports-cine-stage{position:sticky;top:0;height:100svh;width:100%;overflow:hidden;background:var(--cine-stage);display:grid;grid-template-columns:minmax(0,34%) minmax(0,66%);align-items:center;isolation:isolate}
+.jkimports-cine-frame{grid-column:2;grid-row:1;position:relative;z-index:1;height:100%;min-width:0}
+.jkimports-cine-video,.jkimports-cine-fallback{display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom;background:var(--cine-stage)}
+.jkimports-cine-fallback{position:absolute;inset:0;height:100%;opacity:0;pointer-events:none;transition:opacity .4s ease}
+.jkimports-cine[data-mode="static"] .jkimports-cine-fallback{opacity:1}
+.jkimports-cine[data-mode="static"] .jkimports-cine-video{visibility:hidden}
+.jkimports-cine-copy{grid-column:1;grid-row:1;position:relative;z-index:3;padding:4.25rem 1.5rem 0 clamp(1.5rem,4.5vw,4.5rem);min-width:0}
+.jkimports-cine-kicker{color:var(--cine-faint);font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;display:block}
+.jkimports-cine-lines{display:grid;margin-top:1.35rem}
+.jkimports-cine-line{grid-area:1/1;margin:0;align-self:center;color:var(--cine-ink);font-size:clamp(1.75rem,2.85vw,3.1rem);line-height:.98;letter-spacing:-.045em;font-weight:800;opacity:0;transform:translate3d(0,12px,0);will-change:opacity,transform}
+.jkimports-cine-line em{font-style:normal;color:var(--cine-accent)}
+.jkimports-cine-support{margin-top:1.4rem;max-width:30ch;color:var(--cine-muted);font-size:15px;line-height:1.55;opacity:0;transform:translate3d(0,10px,0)}
+.jkimports-cine-rail{position:relative;margin-top:2.6rem;width:min(13rem,60%);height:1px;background:var(--cine-rail);overflow:hidden}
+.jkimports-cine-rail i{position:absolute;inset:0;display:block;background:var(--cine-accent);transform:scaleX(var(--cine-progress));transform-origin:left center}
+.jkimports-cine-status{margin-top:.9rem;color:var(--cine-faint);font-size:11px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;min-height:1rem}
+.jkimports-cine-cue{position:absolute;left:50%;bottom:clamp(1.25rem,3.5vh,2.25rem);transform:translate(-50%);z-index:3;display:inline-flex;align-items:center;gap:.55rem;font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;white-space:nowrap;pointer-events:none;color:var(--cine-faint)}
+.jkimports-cine-cue span{width:1.5rem;height:1px;background:currentColor;animation:jkimportsCineCue 2.4s cubic-bezier(.4,0,.2,1) infinite}
+.jkimports-cine-veil{position:absolute;inset:0;z-index:5;background:var(--site-bg);opacity:var(--cine-veil);pointer-events:none;will-change:opacity}
+@keyframes jkimportsCineCue{0%,100%{transform:scaleX(.35);opacity:.35}50%{transform:scaleX(1);opacity:1}}
 @media(max-width:767px),(max-aspect-ratio:1/1){
-  .miphone-cine{height:380svh}
-  .miphone-cine-stage{grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr);align-items:start}
-  .miphone-cine-copy{grid-column:1;grid-row:1;width:100%;max-width:100vw;padding:5rem clamp(1.35rem,4vw,3rem) 0;overflow:hidden}
-  .miphone-cine-line{font-size:clamp(1.75rem,8.6vw,2.6rem)}
-  .miphone-cine-line em{display:block}
-  .miphone-cine-support{margin-top:.9rem;max-width:31ch;font-size:14px}
-  .miphone-cine-rail{margin-top:1.5rem;width:8rem}
-  .miphone-cine-frame{grid-column:1;grid-row:2;align-self:end;height:auto;width:100%;aspect-ratio:9/8;max-height:100%;margin-bottom:2.5rem;overflow:hidden}
-  .miphone-cine-video,.miphone-cine-fallback{object-fit:cover;object-position:center bottom}
+  .jkimports-cine{height:380svh}
+  .jkimports-cine-stage{grid-template-columns:minmax(0,1fr);grid-template-rows:auto minmax(0,1fr);align-items:start}
+  .jkimports-cine-copy{grid-column:1;grid-row:1;width:100%;max-width:100vw;padding:5rem clamp(1.35rem,4vw,3rem) 0;overflow:hidden}
+  .jkimports-cine-line{font-size:clamp(1.75rem,8.6vw,2.6rem)}
+  .jkimports-cine-line em{display:block}
+  .jkimports-cine-support{margin-top:.9rem;max-width:31ch;font-size:14px}
+  .jkimports-cine-rail{margin-top:1.5rem;width:8rem}
+  .jkimports-cine-frame{grid-column:1;grid-row:2;align-self:end;height:auto;width:100%;aspect-ratio:9/8;max-height:100%;margin-bottom:2.5rem;overflow:hidden}
+  .jkimports-cine-video,.jkimports-cine-fallback{object-fit:cover;object-position:center bottom}
 }
 
 /* SHELL - padronizado */
@@ -241,8 +241,8 @@ img{display:block;max-width:100%}
 .ig-avatar{width:92px;height:92px;border-radius:999px;object-fit:cover;border:3px solid var(--site-border)}
 .ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 @media(max-width:600px){.ig-grid{grid-template-columns:repeat(2,1fr)}}
-.ig-tile{aspect-ratio:1;border-radius:12px;overflow:hidden;background:var(--site-panel-soft);border:1px solid var(--site-border)}
-.ig-tile img{width:100%;height:100%;object-fit:cover;transition:transform .25s}
+.ig-tile{aspect-ratio:3 / 4;border-radius:12px;overflow:hidden;background:var(--site-panel-soft);border:1px solid var(--site-border)}
+.ig-tile img{width:100%;height:100%;object-fit:cover;object-position:center;transition:transform .25s}
 .ig-tile:hover img{transform:scale(1.03)}
 
 /* LOJA 360 + MOTO + UNITS shared float */

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useCart } from '../context/CartContext.jsx'
 import { useTheme } from '../context/ThemeContext.jsx'
-function fmt(c){ return (c/100).toLocaleString('pt-BR',{style:'currency',currency:'BRL'}) }
+function fmt(c){ if(c==null||c===0) return 'Consultar preço'; return (c/100).toLocaleString('pt-BR',{style:'currency',currency:'BRL'}) }
 export default function ProductModal({ product, onClose }){
   const logo = '/logo-jk.png'
   const { addItem } = useCart()
@@ -32,24 +32,23 @@ export default function ProductModal({ product, onClose }){
         </div>
         <div style={{padding:20,display:'grid',gap:12,alignContent:'start'}}>
           <div style={{display:'flex',justifyContent:'space-between',alignItems:'start',gap:12}}>
-            <div><p style={{fontSize:11,letterSpacing:'.14em',textTransform:'uppercase',color:'var(--site-muted)',fontWeight:700}}>{product.category} • {product.condition}</p><h3 style={{fontSize:22,fontWeight:800,letterSpacing:'-.02em'}}>{product.name}</h3><p style={{fontSize:13,color:'var(--site-muted)'}}>{product.armazenamento} • {product.cor} • {product.bateria? `Bateria ${product.bateria}`:''}</p></div>
+            <div><p style={{fontSize:11,letterSpacing:'.14em',textTransform:'uppercase',color:'var(--site-muted)',fontWeight:700}}>{product.category}{product.condition ? ` • ${product.condition}` : ''}</p><h3 style={{fontSize:22,fontWeight:800,letterSpacing:'-.02em'}}>{product.name}</h3><p style={{fontSize:13,color:'var(--site-muted)'}}>{[product.armazenamento, product.cor, product.bateria? `Bateria ${product.bateria}`:''].filter(Boolean).join(' • ') || 'Consulte disponibilidade'}</p></div>
             <button onClick={onClose} style={{width:34,height:34,borderRadius:999,border:'1px solid var(--site-border)',background:'transparent',color:'var(--site-text)',cursor:'pointer'}}>✕</button>
           </div>
-          <p style={{fontSize:13,lineHeight:1.6,color:'var(--site-muted)'}}>{product.description || product.short || 'Aparelho revisado em bancada, desbloqueado e com garantia JK IMPORTS. Acompanha nota e suporte para configuração.'}</p>
+          <p style={{fontSize:13,lineHeight:1.6,color:'var(--site-muted)'}}>{product.description || product.short || 'Consulte disponibilidade, cores e condições com a JK IMPORTS via WhatsApp.'}</p>
           <div style={{background:'var(--site-panel-soft)',border:'1px solid var(--site-border)',borderRadius:12,padding:12}}>
             <p style={{fontWeight:700,fontSize:12,letterSpacing:'.08em',textTransform:'uppercase',color:'var(--site-muted)',marginBottom:6}}>Especificações</p>
             <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:8,fontSize:13}}>
-              <span>Armazenamento: <strong>{product.armazenamento}</strong></span>
-              <span>Cor: <strong>{product.cor||'—'}</strong></span>
-              <span>Condição: <strong>{product.condition}</strong></span>
-              <span>Garantia: <strong>90 dias</strong></span>
+              <span>Armazenamento: <strong>{product.armazenamento || 'Consultar'}</strong></span>
+              <span>Cor: <strong>{product.cor||'Consultar'}</strong></span>
+              <span>Condição: <strong>{product.condition || 'Consultar'}</strong></span>
+              <span>Garantia: <strong>{product.garantia || 'Consultar'}</strong></span>
             </div>
           </div>
           <div style={{display:'flex',alignItems:'end',gap:12,flexWrap:'wrap'}}>
-            <div><p style={{fontSize:22,fontWeight:800}}>{fmt(product.price)}</p><p style={{fontSize:12,color:'var(--site-muted)'}}>em até 12x • pix com desconto</p></div>
+            <div><p style={{fontSize:22,fontWeight:800}}>{fmt(product.price)}</p>{product.price ? <p style={{fontSize:12,color:'var(--site-muted)'}}>em até 12x • pix com desconto</p> : <p style={{fontSize:12,color:'var(--site-muted)'}}>Consulte condições de pagamento</p>}</div>
             <div style={{marginLeft:'auto',display:'flex',alignItems:'center',gap:8}}>
-              <div className="cart-qty"><button onClick={()=>setQty(q=>Math.max(1,q-1))}>−</button><span style={{minWidth:18,textAlign:'center',fontWeight:700}}>{qty}</span><button onClick={()=>setQty(q=>Math.min(99,q+1))}>＋</button></div>
-              <button className="btn-primary" onClick={()=>{ addItem(product, variant, qty); onClose() }}>Adicionar ao carrinho</button>
+              {product.price ? (<><div className="cart-qty"><button onClick={()=>setQty(q=>Math.max(1,q-1))}>−</button><span style={{minWidth:18,textAlign:'center',fontWeight:700}}>{qty}</span><button onClick={()=>setQty(q=>Math.min(99,q+1))}>＋</button></div><button className="btn-primary" onClick={()=>{ addItem(product, variant, qty); onClose() }}>Adicionar ao carrinho</button></>) : (<a href={`https://api.whatsapp.com/send/?phone=5599984599773&text=${encodeURIComponent(`Olá, JK IMPORTS! Quero saber o preço do ${product.name}. Podem me informar?`)}`} target="_blank" rel="noopener" className="btn-primary" style={{textDecoration:'none'}}>Consultar no WhatsApp</a>)}
             </div>
           </div>
           <a href="https://api.whatsapp.com/send/?phone=5599984599773" target="_blank" rel="noopener" className="btn-ghost" style={{textAlign:'center'}}>Tirar dúvida no WhatsApp</a>

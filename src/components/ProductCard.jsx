@@ -19,11 +19,7 @@ function formatDisplayName(raw){
   return n
 }
 function isSeminovo(product){
-  if(product.category !== 'iphones') return false
-  const m = (product.name || '').match(/iphone\s*(\d+)/i)
-  if(!m) return false
-  const gen = parseInt(m[1], 10)
-  return gen <= 14
+  return product.condition === 'Seminovo'
 }
 
 export default function ProductCard({ product, onOpen }){

@@ -2,34 +2,34 @@ import './Inactive.css'
 
 export default function Inactive(){
   return (
-    <div className="miphone-inactive">
-      <div className="miphone-inactive-bg" aria-hidden="true" />
-      <div className="miphone-inactive-glow" aria-hidden="true" />
+    <div className="jkimports-inactive">
+      <div className="jkimports-inactive-bg" aria-hidden="true" />
+      <div className="jkimports-inactive-glow" aria-hidden="true" />
 
-      <main className="miphone-inactive-main">
-        <div className="miphone-inactive-brand ia-reveal ia-d1">
+      <main className="jkimports-inactive-main">
+        <div className="jkimports-inactive-brand ia-reveal ia-d1">
           <img src="/logo-jk.png" alt="JK IMPORTS" width="44" height="44" />
           <span>JK IMPORTS</span>
         </div>
 
-        <h1 className="miphone-inactive-title ia-reveal ia-d2">Projeto demonstrativo</h1>
+        <h1 className="jkimports-inactive-title ia-reveal ia-d2">Projeto demonstrativo</h1>
 
-        <p className="miphone-inactive-subtitle ia-reveal ia-d3">
+        <p className="jkimports-inactive-subtitle ia-reveal ia-d3">
           Esta demonstração não está atualmente em&nbsp;operação.
         </p>
 
-        <span className="miphone-inactive-divider ia-reveal ia-d3" aria-hidden="true" />
+        <span className="jkimports-inactive-divider ia-reveal ia-d3" aria-hidden="true" />
 
-        <p className="miphone-inactive-note ia-reveal ia-d4">
+        <p className="jkimports-inactive-note ia-reveal ia-d4">
           Desenvolvido como conceito de experiência digital para a JK IMPORTS.
         </p>
 
-        <div className="miphone-inactive-contact ia-reveal ia-d5">
+        <div className="jkimports-inactive-contact ia-reveal ia-d5">
           <a
             href="https://api.whatsapp.com/send/?phone=5599984599773"
             target="_blank"
             rel="noopener noreferrer"
-            className="miphone-inactive-cta"
+            className="jkimports-inactive-cta"
             aria-label="Entrar em contato via WhatsApp com a JK IMPORTS"
           >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
@@ -37,11 +37,11 @@ export default function Inactive(){
             </svg>
             Entrar em contato
           </a>
-          <span className="miphone-inactive-cta-hint">Contato com o desenvolvedor do projeto</span>
+          <span className="jkimports-inactive-cta-hint">Contato com o desenvolvedor do projeto</span>
         </div>
       </main>
 
-      <footer className="miphone-inactive-footer ia-reveal ia-d6">
+      <footer className="jkimports-inactive-footer ia-reveal ia-d6">
         Projeto demonstrativo • Site não operacional
       </footer>
     </div>

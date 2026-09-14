@@ -6,7 +6,7 @@ import products from '../data/products.json'
 import './Loja.css'
 import { useCart } from '../context/CartContext.jsx'
 
-const CATS = ['Todos','iPhones','Samsung','Xiaomi','Realme']
+const CATS = ['Todos','iPhones']
 
 export default function Loja(){
   const [q,setQ]=useState('')
@@ -19,9 +19,6 @@ export default function Loja(){
   const filtered = useMemo(()=>{
     let list = products.filter(p=>!p.hidden)
     if(cat==='iPhones') list=list.filter(p=>p.category==='iphones')
-    else if(cat==='Samsung') list=list.filter(p=> (p.marca||'').toLowerCase().includes('samsung') || p.category==='samsung')
-    else if(cat==='Xiaomi') list=list.filter(p=> (p.marca||'').toLowerCase().includes('xiaomi') || p.category==='xiaomi')
-    else if(cat==='Realme') list=list.filter(p=>p.category==='realme' || (p.marca||'').toLowerCase().includes('realme'))
     if(q) {
       const qq = q.toLowerCase()
       list=list.filter(p=> p.name.toLowerCase().includes(qq) || (p.modelo||'').toLowerCase().includes(qq) || (p.marca||'').toLowerCase().includes(qq))

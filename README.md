@@ -3,7 +3,7 @@
 <br>
 <br>
 
-<h1>MIPHONE</h1>
+<h1>JK IMPORTS</h1>
 
 <p>
   <strong>DIGITAL COMMERCE EXPERIENCE</strong>
@@ -17,8 +17,8 @@
 <br>
 
 <img
-  src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=16&duration=3200&pause=1000&color=FF6500&center=true&vCenter=true&width=700&lines=PRODUCT.+MOTION.+COMMERCE.;BUILT+FOR+MIPHONE+STORE.;AUGUSTIN%C3%93POLIS+%C2%B7+ARAGUATINS+%C2%B7+TOCANTINS"
-  alt="MiPhone"
+  src="https://readme-typing-svg.demolab.com?font=Inter&weight=500&size=16&duration=3200&pause=1000&color=FF6500&center=true&vCenter=true&width=700&lines=PRODUCT.+MOTION.+COMMERCE.;BUILT+FOR+JK+IMPORTS+STORE.;AUGUSTIN%C3%93POLIS+%C2%B7+ARAGUATINS+%C2%B7+TOCANTINS"
+  alt="JK Imports"
 />
 
 <br>
@@ -40,7 +40,7 @@
 
 ## The Experience
 
-A MiPhone não precisava apenas de um site.
+A JK Imports não precisava apenas de um site.
 
 Precisava de uma presença digital capaz de representar a experiência da loja, apresentar seus produtos e transformar interesse em contato comercial.
 
@@ -70,7 +70,7 @@ Uma experiência feita para ser explorada.
 
 ### Commerce
 
-Catálogo, carrinho e jornada de compra conectados diretamente ao atendimento da MiPhone.
+Catálogo, carrinho e jornada de compra conectados diretamente ao atendimento da JK Imports.
 
 Sem atrito entre descoberta e conversa.
 
@@ -97,4 +97,4 @@ CHOOSE
     ↓
 ADD TO CART
     ↓
-TALK TO MIPHONE
+TALK TO JK IMPORTS

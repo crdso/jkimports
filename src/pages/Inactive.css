@@ -1,4 +1,4 @@
-.miphone-inactive{
+.jkimports-inactive{
   --ia-bg:#080808;
   --ia-text:#f5f5f7;
   --ia-muted:#a1a1aa;
@@ -19,7 +19,7 @@
   -webkit-font-smoothing:antialiased;
 }
 
-.miphone-inactive-bg{
+.jkimports-inactive-bg{
   position:absolute;
   inset:0;
   z-index:0;
@@ -31,7 +31,7 @@
     var(--ia-bg);
 }
 
-.miphone-inactive-glow{
+.jkimports-inactive-glow{
   position:absolute;
   left:50%;
   top:18%;
@@ -51,7 +51,7 @@
   to{ opacity:1; transform:translateX(-50%) scale(1.04); }
 }
 
-.miphone-inactive-main{
+.jkimports-inactive-main{
   position:relative;
   z-index:1;
   flex:1;
@@ -66,7 +66,7 @@
   gap:0;
 }
 
-.miphone-inactive-brand{
+.jkimports-inactive-brand{
   display:inline-flex;
   align-items:center;
   gap:.7rem;
@@ -74,7 +74,7 @@
   user-select:none;
 }
 
-.miphone-inactive-brand img{
+.jkimports-inactive-brand img{
   width:2.6rem;
   height:2.6rem;
   object-fit:contain;
@@ -83,14 +83,14 @@
   filter:drop-shadow(0 2px 10px rgba(0,0,0,.35));
 }
 
-.miphone-inactive-brand span{
+.jkimports-inactive-brand span{
   font-size:.98rem;
   font-weight:800;
   letter-spacing:-.02em;
   color:var(--ia-text);
 }
 
-.miphone-inactive-title{
+.jkimports-inactive-title{
   margin:0;
   font-size:clamp(2rem, 6.2vw, 3.35rem);
   font-weight:800;
@@ -101,7 +101,7 @@
   text-wrap:balance;
 }
 
-.miphone-inactive-subtitle{
+.jkimports-inactive-subtitle{
   margin:clamp(1rem, 2.2vh, 1.35rem) 0 0;
   max-width:32ch;
   font-size:clamp(.95rem, 2.4vw, 1.05rem);
@@ -111,7 +111,7 @@
   text-wrap:balance;
 }
 
-.miphone-inactive-divider{
+.jkimports-inactive-divider{
   display:block;
   width:28px;
   height:1px;
@@ -120,7 +120,7 @@
   border-radius:999px;
 }
 
-.miphone-inactive-note{
+.jkimports-inactive-note{
   margin:.95rem 0 0;
   max-width:36ch;
   font-size:13px;
@@ -130,7 +130,7 @@
   text-wrap:balance;
 }
 
-.miphone-inactive-footer{
+.jkimports-inactive-footer{
   position:relative;
   z-index:1;
   width:100%;
@@ -148,7 +148,7 @@
   text-align:center;
 }
 
-.miphone-inactive-contact{
+.jkimports-inactive-contact{
   margin-top:clamp(1.5rem, 4vh, 2rem);
   display:flex;
   flex-direction:column;
@@ -156,7 +156,7 @@
   gap:.55rem;
 }
 
-.miphone-inactive-cta{
+.jkimports-inactive-cta{
   display:inline-flex;
   align-items:center;
   justify-content:center;
@@ -177,22 +177,22 @@
   white-space:nowrap;
 }
 
-.miphone-inactive-cta:hover{
+.jkimports-inactive-cta:hover{
   background:rgba(255,255,255,.10);
   border-color:rgba(255,255,255,.16);
   transform:translateY(-1px);
 }
 
-.miphone-inactive-cta:active{ transform:translateY(0); }
+.jkimports-inactive-cta:active{ transform:translateY(0); }
 
-.miphone-inactive-cta svg{
+.jkimports-inactive-cta svg{
   width:16px;
   height:16px;
   flex:none;
   opacity:.92;
 }
 
-.miphone-inactive-cta-hint{
+.jkimports-inactive-cta-hint{
   font-size:11px;
   font-weight:500;
   letter-spacing:.04em;
@@ -219,15 +219,15 @@
 }
 
 @media(max-width:480px){
-  .miphone-inactive-main{ padding-top:3rem; }
-  .miphone-inactive-brand{ margin-bottom:1.75rem; }
-  .miphone-inactive-brand img{ width:2.35rem; height:2.35rem; }
-  .miphone-inactive-title{ font-size:clamp(1.9rem, 8.2vw, 2.5rem); }
-  .miphone-inactive-cta{ height:42px; padding:0 22px; font-size:13.5px; }
-  .miphone-inactive-footer{ font-size:10px; letter-spacing:.12em; padding-inline:12px; }
+  .jkimports-inactive-main{ padding-top:3rem; }
+  .jkimports-inactive-brand{ margin-bottom:1.75rem; }
+  .jkimports-inactive-brand img{ width:2.35rem; height:2.35rem; }
+  .jkimports-inactive-title{ font-size:clamp(1.9rem, 8.2vw, 2.5rem); }
+  .jkimports-inactive-cta{ height:42px; padding:0 22px; font-size:13.5px; }
+  .jkimports-inactive-footer{ font-size:10px; letter-spacing:.12em; padding-inline:12px; }
 }
 
 @media(prefers-reduced-motion:reduce){
   .ia-reveal{ animation:none; opacity:1; transform:none; }
-  .miphone-inactive-glow{ animation:none; }
+  .jkimports-inactive-glow{ animation:none; }
 }

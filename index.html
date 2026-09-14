@@ -12,7 +12,7 @@
     <script>
       (function(){
         try{
-          var saved = localStorage.getItem('jkimports_theme') || localStorage.getItem('miphone_theme');
+          var saved = localStorage.getItem('jkimports_theme');
           var theme = saved === 'light' || saved === 'dark' ? saved : (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
           document.documentElement.setAttribute('data-theme', theme);
           document.documentElement.style.colorScheme = theme;

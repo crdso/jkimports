@@ -32,16 +32,16 @@ export default function CineHero(){
 
   const sources = {
     dark: {
-      desktop:'/video/miphone-scroll/miphone-scroll-desktop-dark.mp4',
-      mobile:'/video/miphone-scroll/miphone-scroll-mobile-dark.mp4',
-      poster:'/video/miphone-scroll/miphone-scroll-poster-dark.webp',
-      final:'/video/miphone-scroll/miphone-scroll-final-dark.webp',
+      desktop:'/video/jkimports-scroll/jkimports-scroll-desktop-dark.mp4',
+      mobile:'/video/jkimports-scroll/jkimports-scroll-mobile-dark.mp4',
+      poster:'/video/jkimports-scroll/jkimports-scroll-poster-dark.webp',
+      final:'/video/jkimports-scroll/jkimports-scroll-final-dark.webp',
     },
     light: {
-      desktop:'/video/miphone-scroll/miphone-scroll-desktop.mp4',
-      mobile:'/video/miphone-scroll/miphone-scroll-mobile.mp4',
-      poster:'/video/miphone-scroll/miphone-scroll-poster.webp',
-      final:'/video/miphone-scroll/miphone-scroll-final.webp',
+      desktop:'/video/jkimports-scroll/jkimports-scroll-desktop.mp4',
+      mobile:'/video/jkimports-scroll/jkimports-scroll-mobile.mp4',
+      poster:'/video/jkimports-scroll/jkimports-scroll-poster.webp',
+      final:'/video/jkimports-scroll/jkimports-scroll-final.webp',
     }
   }
   const src = sources[theme] || sources.dark
@@ -51,7 +51,7 @@ export default function CineHero(){
     const s = stageRef.current
     const j = videoRef.current
     if(!b||!s||!j) return
-    const E = Array.from(copyRef.current?.querySelectorAll('.miphone-cine-line')??[])
+    const E = Array.from(copyRef.current?.querySelectorAll('.jkimports-cine-line')??[])
 
     function setStatus(text,ready){
       const el=statusRef.current
@@ -188,28 +188,28 @@ export default function CineHero(){
   },[src.desktop, src.mobile, theme])
 
   return (
-    <section ref={sectionRef} id="hero" className="miphone-cine" data-mode={mode} data-theme={theme} aria-labelledby="miphone-title">
-      <div ref={stageRef} className="miphone-cine-stage">
-        <div className="miphone-cine-frame">
-          <video ref={videoRef} className="miphone-cine-video" muted playsInline preload="auto" poster={src.poster} aria-hidden tabIndex={-1} />
-          <img src={src.final} alt="iPhone em detalhe — linha disponível na JK IMPORTS" className="miphone-cine-fallback" loading="lazy" decoding="async" />
+    <section ref={sectionRef} id="hero" className="jkimports-cine" data-mode={mode} data-theme={theme} aria-labelledby="jkimports-title">
+      <div ref={stageRef} className="jkimports-cine-stage">
+        <div className="jkimports-cine-frame">
+          <video ref={videoRef} className="jkimports-cine-video" muted playsInline preload="auto" poster={src.poster} aria-hidden tabIndex={-1} />
+          <img src={src.final} alt="iPhone em detalhe — linha disponível na JK IMPORTS" className="jkimports-cine-fallback" loading="lazy" decoding="async" />
         </div>
 
-        <div ref={copyRef} className="miphone-cine-copy">
-          <p className="miphone-cine-kicker">JK IMPORTS</p>
-          <div className="miphone-cine-lines">
-            <h1 className="miphone-cine-line" id="miphone-title">Seu próximo <em>upgrade</em> começa aqui.</h1>
-            <p className="miphone-cine-line" aria-hidden="true">Do detalhe à <em>experiência<span className="miphone-cine-stop">.</span></em></p>
-            <p className="miphone-cine-line" aria-hidden="true">Cada detalhe no <em>lugar certo<span className="miphone-cine-stop">.</span></em></p>
-            <p className="miphone-cine-line" aria-hidden="true">Você escolhe. A <em>JK IMPORTS</em> cuida.</p>
+        <div ref={copyRef} className="jkimports-cine-copy">
+          <p className="jkimports-cine-kicker">JK IMPORTS</p>
+          <div className="jkimports-cine-lines">
+            <h1 className="jkimports-cine-line" id="jkimports-title">Seu próximo <em>upgrade</em> começa aqui.</h1>
+            <p className="jkimports-cine-line" aria-hidden="true">Do detalhe à <em>experiência<span className="jkimports-cine-stop">.</span></em></p>
+            <p className="jkimports-cine-line" aria-hidden="true">Cada detalhe no <em>lugar certo<span className="jkimports-cine-stop">.</span></em></p>
+            <p className="jkimports-cine-line" aria-hidden="true">Você escolhe. A <em>JK IMPORTS</em> cuida.</p>
           </div>
-          <p ref={supportRef} className="miphone-cine-support">Aparelhos novos, seminovos e assistência técnica com garantia.</p>
-          <div className="miphone-cine-rail" aria-hidden="true"><i /></div>
-          <p ref={statusRef} className="miphone-cine-status" aria-live="polite" />
+          <p ref={supportRef} className="jkimports-cine-support">Aparelhos novos, seminovos e assistência técnica com garantia.</p>
+          <div className="jkimports-cine-rail" aria-hidden="true"><i /></div>
+          <p ref={statusRef} className="jkimports-cine-status" aria-live="polite" />
         </div>
 
-        <div ref={cueRef} className="miphone-cine-cue" aria-hidden="true"><span />Role para avançar</div>
-        <div className="miphone-cine-veil" aria-hidden="true" />
+        <div ref={cueRef} className="jkimports-cine-cue" aria-hidden="true"><span />Role para avançar</div>
+        <div className="jkimports-cine-veil" aria-hidden="true" />
       </div>
     </section>
   )
