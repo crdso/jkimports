@@ -29,7 +29,7 @@ export function CartProvider({children}){
             name:product.name,
             variantLabel:variant?.label||variant?.storage||product.armazenamento||'Unico',
             image:product.images?.[0]||logo,
-            price:variant?.price||product.price,
+            price: variant?.price ?? product.price,
             quantity:qty
           }]
         })

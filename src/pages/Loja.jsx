@@ -17,14 +17,19 @@ export default function Loja(){
   const { openCart } = useCart()
 
   const filtered = useMemo(()=>{
+    const getMinPrice = (p)=>{
+      const priced = (p.variants||[]).filter(v=> v.price != null && v.price > 0)
+      if(priced.length) return Math.min(...priced.map(v=>v.price))
+      return p.price ?? 999999999
+    }
     let list = products.filter(p=>!p.hidden)
     if(cat==='iPhones') list=list.filter(p=>p.category==='iphones')
     if(q) {
       const qq = q.toLowerCase()
       list=list.filter(p=> p.name.toLowerCase().includes(qq) || (p.modelo||'').toLowerCase().includes(qq) || (p.marca||'').toLowerCase().includes(qq))
     }
-    if(sort==='menor') list=[...list].sort((a,b)=> (a.price ?? 999999999) - (b.price ?? 999999999))
-    if(sort==='maior') list=[...list].sort((a,b)=> (b.price ?? 0) - (a.price ?? 0))
+    if(sort==='menor') list=[...list].sort((a,b)=> getMinPrice(a) - getMinPrice(b))
+    if(sort==='maior') list=[...list].sort((a,b)=> getMinPrice(b) - getMinPrice(a))
     if(sort==='nome') list=[...list].sort((a,b)=>a.name.localeCompare(b.name))
     return list
   },[q,cat,sort])

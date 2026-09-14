@@ -33,13 +33,44 @@
     "price": 899900,
     "preco": 899900,
     "compareAt": 0,
-    "images": ["/images/produtos/iphone-17-pro-max.png"],
+    "images": [
+      "/images/produtos/iphone-17-pro-max.png"
+    ],
     "foto_url": "/images/produtos/iphone-17-pro-max.png",
     "badge": "",
     "tarja": "",
     "tags": [],
     "specs": [],
-    "variants": [{ "id": "iphone-17-pro-max-unico", "label": "Único", "price": 899900, "color": "", "storage": "256GB" }],
+    "variants": [
+      {
+        "id": "iphone-17-pro-max-256gb",
+        "label": "256GB",
+        "storage": "256GB",
+        "price": 899900,
+        "stock": null
+      },
+      {
+        "id": "iphone-17-pro-max-512gb",
+        "label": "512GB",
+        "storage": "512GB",
+        "price": null,
+        "stock": null
+      },
+      {
+        "id": "iphone-17-pro-max-1tb",
+        "label": "1TB",
+        "storage": "1TB",
+        "price": null,
+        "stock": null
+      },
+      {
+        "id": "iphone-17-pro-max-2tb",
+        "label": "2TB",
+        "storage": "2TB",
+        "price": null,
+        "stock": null
+      }
+    ],
     "stock": 0,
     "delivery": "",
     "lojas": [],
@@ -86,13 +117,37 @@
     "price": 839900,
     "preco": 839900,
     "compareAt": 0,
-    "images": ["/images/produtos/iphone-17-pro.png"],
+    "images": [
+      "/images/produtos/iphone-17-pro.png"
+    ],
     "foto_url": "/images/produtos/iphone-17-pro.png",
     "badge": "",
     "tarja": "",
     "tags": [],
     "specs": [],
-    "variants": [{ "id": "iphone-17-pro-unico", "label": "Único", "price": 839900, "color": "", "storage": "256GB" }],
+    "variants": [
+      {
+        "id": "iphone-17-pro-256gb",
+        "label": "256GB",
+        "storage": "256GB",
+        "price": 839900,
+        "stock": null
+      },
+      {
+        "id": "iphone-17-pro-512gb",
+        "label": "512GB",
+        "storage": "512GB",
+        "price": null,
+        "stock": null
+      },
+      {
+        "id": "iphone-17-pro-1tb",
+        "label": "1TB",
+        "storage": "1TB",
+        "price": null,
+        "stock": null
+      }
+    ],
     "stock": 0,
     "delivery": "",
     "lojas": [],
@@ -139,13 +194,30 @@
     "price": 579900,
     "preco": 579900,
     "compareAt": 0,
-    "images": ["/images/produtos/iphone-17.png"],
+    "images": [
+      "/images/produtos/iphone-17.png"
+    ],
     "foto_url": "/images/produtos/iphone-17.png",
     "badge": "",
     "tarja": "",
     "tags": [],
     "specs": [],
-    "variants": [{ "id": "iphone-17-unico", "label": "Único", "price": 579900, "color": "", "storage": "256GB" }],
+    "variants": [
+      {
+        "id": "iphone-17-256gb",
+        "label": "256GB",
+        "storage": "256GB",
+        "price": 579900,
+        "stock": null
+      },
+      {
+        "id": "iphone-17-512gb",
+        "label": "512GB",
+        "storage": "512GB",
+        "price": null,
+        "stock": null
+      }
+    ],
     "stock": 0,
     "delivery": "",
     "lojas": [],
@@ -192,13 +264,37 @@
     "price": 849900,
     "preco": 849900,
     "compareAt": 0,
-    "images": ["/images/produtos/iphone-16-pro-max.png"],
+    "images": [
+      "/images/produtos/iphone-16-pro-max.png"
+    ],
     "foto_url": "/images/produtos/iphone-16-pro-max.png",
     "badge": "",
     "tarja": "",
     "tags": [],
     "specs": [],
-    "variants": [{ "id": "iphone-16-pro-max-unico", "label": "Único", "price": 849900, "color": "", "storage": "256GB" }],
+    "variants": [
+      {
+        "id": "iphone-16-pro-max-256gb",
+        "label": "256GB",
+        "storage": "256GB",
+        "price": 849900,
+        "stock": null
+      },
+      {
+        "id": "iphone-16-pro-max-512gb",
+        "label": "512GB",
+        "storage": "512GB",
+        "price": null,
+        "stock": null
+      },
+      {
+        "id": "iphone-16-pro-max-1tb",
+        "label": "1TB",
+        "storage": "1TB",
+        "price": null,
+        "stock": null
+      }
+    ],
     "stock": 0,
     "delivery": "",
     "lojas": [],
@@ -245,13 +341,44 @@
     "price": 679900,
     "preco": 679900,
     "compareAt": 0,
-    "images": ["/images/produtos/iphone-16-pro.png"],
+    "images": [
+      "/images/produtos/iphone-16-pro.png"
+    ],
     "foto_url": "/images/produtos/iphone-16-pro.png",
     "badge": "",
     "tarja": "",
     "tags": [],
     "specs": [],
-    "variants": [{ "id": "iphone-16-pro-unico", "label": "Único", "price": 679900, "color": "", "storage": "128GB" }],
+    "variants": [
+      {
+        "id": "iphone-16-pro-128gb",
+        "label": "128GB",
+        "storage": "128GB",
+        "price": 679900,
+        "stock": null
+      },
+      {
+        "id": "iphone-16-pro-256gb",
+        "label": "256GB",
+        "storage": "256GB",
+        "price": null,
+        "stock": null
+      },
+      {
+        "id": "iphone-16-pro-512gb",
+        "label": "512GB",
+        "storage": "512GB",
+        "price": null,
+        "stock": null
+      },
+      {
+        "id": "iphone-16-pro-1tb",
+        "label": "1TB",
+        "storage": "1TB",
+        "price": null,
+        "stock": null
+      }
+    ],
     "stock": 0,
     "delivery": "",
     "lojas": [],
@@ -298,13 +425,37 @@
     "price": 459900,
     "preco": 459900,
     "compareAt": 0,
-    "images": ["/images/produtos/iphone-16.png"],
+    "images": [
+      "/images/produtos/iphone-16.png"
+    ],
     "foto_url": "/images/produtos/iphone-16.png",
     "badge": "",
     "tarja": "",
     "tags": [],
     "specs": [],
-    "variants": [{ "id": "iphone-16-unico", "label": "Único", "price": 459900, "color": "", "storage": "128GB" }],
+    "variants": [
+      {
+        "id": "iphone-16-128gb",
+        "label": "128GB",
+        "storage": "128GB",
+        "price": 459900,
+        "stock": null
+      },
+      {
+        "id": "iphone-16-256gb",
+        "label": "256GB",
+        "storage": "256GB",
+        "price": null,
+        "stock": null
+      },
+      {
+        "id": "iphone-16-512gb",
+        "label": "512GB",
+        "storage": "512GB",
+        "price": null,
+        "stock": null
+      }
+    ],
     "stock": 0,
     "delivery": "",
     "lojas": [],
@@ -351,13 +502,37 @@
     "price": 599900,
     "preco": 599900,
     "compareAt": 0,
-    "images": ["/images/produtos/iphone-15-pro-max.png"],
+    "images": [
+      "/images/produtos/iphone-15-pro-max.png"
+    ],
     "foto_url": "/images/produtos/iphone-15-pro-max.png",
     "badge": "",
     "tarja": "",
     "tags": [],
     "specs": [],
-    "variants": [{ "id": "iphone-15-pro-max-unico", "label": "Único", "price": 599900, "color": "", "storage": "256GB" }],
+    "variants": [
+      {
+        "id": "iphone-15-pro-max-256gb",
+        "label": "256GB",
+        "storage": "256GB",
+        "price": 599900,
+        "stock": null
+      },
+      {
+        "id": "iphone-15-pro-max-512gb",
+        "label": "512GB",
+        "storage": "512GB",
+        "price": null,
+        "stock": null
+      },
+      {
+        "id": "iphone-15-pro-max-1tb",
+        "label": "1TB",
+        "storage": "1TB",
+        "price": null,
+        "stock": null
+      }
+    ],
     "stock": 0,
     "delivery": "",
     "lojas": [],
@@ -404,13 +579,44 @@
     "price": 369900,
     "preco": 369900,
     "compareAt": 0,
-    "images": ["/images/produtos/iphone-15-pro.png"],
+    "images": [
+      "/images/produtos/iphone-15-pro.png"
+    ],
     "foto_url": "/images/produtos/iphone-15-pro.png",
     "badge": "",
     "tarja": "",
     "tags": [],
     "specs": [],
-    "variants": [{ "id": "iphone-15-pro-unico", "label": "Único", "price": 369900, "color": "", "storage": "128GB" }],
+    "variants": [
+      {
+        "id": "iphone-15-pro-128gb",
+        "label": "128GB",
+        "storage": "128GB",
+        "price": 369900,
+        "stock": null
+      },
+      {
+        "id": "iphone-15-pro-256gb",
+        "label": "256GB",
+        "storage": "256GB",
+        "price": null,
+        "stock": null
+      },
+      {
+        "id": "iphone-15-pro-512gb",
+        "label": "512GB",
+        "storage": "512GB",
+        "price": null,
+        "stock": null
+      },
+      {
+        "id": "iphone-15-pro-1tb",
+        "label": "1TB",
+        "storage": "1TB",
+        "price": null,
+        "stock": null
+      }
+    ],
     "stock": 0,
     "delivery": "",
     "lojas": [],
@@ -457,13 +663,37 @@
     "price": 429900,
     "preco": 429900,
     "compareAt": 0,
-    "images": ["/images/produtos/iphone-15.png"],
+    "images": [
+      "/images/produtos/iphone-15.png"
+    ],
     "foto_url": "/images/produtos/iphone-15.png",
     "badge": "",
     "tarja": "",
     "tags": [],
     "specs": [],
-    "variants": [{ "id": "iphone-15-unico", "label": "Único", "price": 429900, "color": "", "storage": "128GB" }],
+    "variants": [
+      {
+        "id": "iphone-15-128gb",
+        "label": "128GB",
+        "storage": "128GB",
+        "price": 429900,
+        "stock": null
+      },
+      {
+        "id": "iphone-15-256gb",
+        "label": "256GB",
+        "storage": "256GB",
+        "price": null,
+        "stock": null
+      },
+      {
+        "id": "iphone-15-512gb",
+        "label": "512GB",
+        "storage": "512GB",
+        "price": null,
+        "stock": null
+      }
+    ],
     "stock": 0,
     "delivery": "",
     "lojas": [],
@@ -510,13 +740,44 @@
     "price": 379900,
     "preco": 379900,
     "compareAt": 0,
-    "images": ["/images/produtos/iphone-14-pro-max.png"],
+    "images": [
+      "/images/produtos/iphone-14-pro-max.png"
+    ],
     "foto_url": "/images/produtos/iphone-14-pro-max.png",
     "badge": "",
     "tarja": "",
     "tags": [],
     "specs": [],
-    "variants": [{ "id": "iphone-14-pro-max-unico", "label": "Único", "price": 379900, "color": "", "storage": "128GB" }],
+    "variants": [
+      {
+        "id": "iphone-14-pro-max-128gb",
+        "label": "128GB",
+        "storage": "128GB",
+        "price": 379900,
+        "stock": null
+      },
+      {
+        "id": "iphone-14-pro-max-256gb",
+        "label": "256GB",
+        "storage": "256GB",
+        "price": null,
+        "stock": null
+      },
+      {
+        "id": "iphone-14-pro-max-512gb",
+        "label": "512GB",
+        "storage": "512GB",
+        "price": null,
+        "stock": null
+      },
+      {
+        "id": "iphone-14-pro-max-1tb",
+        "label": "1TB",
+        "storage": "1TB",
+        "price": null,
+        "stock": null
+      }
+    ],
     "stock": 0,
     "delivery": "",
     "lojas": [],
@@ -563,13 +824,44 @@
     "price": 349900,
     "preco": 349900,
     "compareAt": 0,
-    "images": ["/images/produtos/iphone-14-pro.png"],
+    "images": [
+      "/images/produtos/iphone-14-pro.png"
+    ],
     "foto_url": "/images/produtos/iphone-14-pro.png",
     "badge": "",
     "tarja": "",
     "tags": [],
     "specs": [],
-    "variants": [{ "id": "iphone-14-pro-unico", "label": "Único", "price": 349900, "color": "", "storage": "128GB" }],
+    "variants": [
+      {
+        "id": "iphone-14-pro-128gb",
+        "label": "128GB",
+        "storage": "128GB",
+        "price": 349900,
+        "stock": null
+      },
+      {
+        "id": "iphone-14-pro-256gb",
+        "label": "256GB",
+        "storage": "256GB",
+        "price": null,
+        "stock": null
+      },
+      {
+        "id": "iphone-14-pro-512gb",
+        "label": "512GB",
+        "storage": "512GB",
+        "price": null,
+        "stock": null
+      },
+      {
+        "id": "iphone-14-pro-1tb",
+        "label": "1TB",
+        "storage": "1TB",
+        "price": null,
+        "stock": null
+      }
+    ],
     "stock": 0,
     "delivery": "",
     "lojas": [],
@@ -616,13 +908,37 @@
     "price": 359900,
     "preco": 359900,
     "compareAt": 0,
-    "images": ["/images/produtos/iphone-14.png"],
+    "images": [
+      "/images/produtos/iphone-14.png"
+    ],
     "foto_url": "/images/produtos/iphone-14.png",
     "badge": "",
     "tarja": "",
     "tags": [],
     "specs": [],
-    "variants": [{ "id": "iphone-14-unico", "label": "Único", "price": 359900, "color": "", "storage": "128GB" }],
+    "variants": [
+      {
+        "id": "iphone-14-128gb",
+        "label": "128GB",
+        "storage": "128GB",
+        "price": 359900,
+        "stock": null
+      },
+      {
+        "id": "iphone-14-256gb",
+        "label": "256GB",
+        "storage": "256GB",
+        "price": null,
+        "stock": null
+      },
+      {
+        "id": "iphone-14-512gb",
+        "label": "512GB",
+        "storage": "512GB",
+        "price": null,
+        "stock": null
+      }
+    ],
     "stock": 0,
     "delivery": "",
     "lojas": [],
@@ -669,13 +985,44 @@
     "price": 329900,
     "preco": 329900,
     "compareAt": 0,
-    "images": ["/images/produtos/iphone-13-pro-max.png"],
+    "images": [
+      "/images/produtos/iphone-13-pro-max.png"
+    ],
     "foto_url": "/images/produtos/iphone-13-pro-max.png",
     "badge": "",
     "tarja": "",
     "tags": [],
     "specs": [],
-    "variants": [{ "id": "iphone-13-pro-max-unico", "label": "Único", "price": 329900, "color": "", "storage": "128GB" }],
+    "variants": [
+      {
+        "id": "iphone-13-pro-max-128gb",
+        "label": "128GB",
+        "storage": "128GB",
+        "price": 329900,
+        "stock": null
+      },
+      {
+        "id": "iphone-13-pro-max-256gb",
+        "label": "256GB",
+        "storage": "256GB",
+        "price": null,
+        "stock": null
+      },
+      {
+        "id": "iphone-13-pro-max-512gb",
+        "label": "512GB",
+        "storage": "512GB",
+        "price": null,
+        "stock": null
+      },
+      {
+        "id": "iphone-13-pro-max-1tb",
+        "label": "1TB",
+        "storage": "1TB",
+        "price": null,
+        "stock": null
+      }
+    ],
     "stock": 0,
     "delivery": "",
     "lojas": [],
@@ -722,13 +1069,44 @@
     "price": 289900,
     "preco": 289900,
     "compareAt": 0,
-    "images": ["/images/produtos/iphone-13-pro.png"],
+    "images": [
+      "/images/produtos/iphone-13-pro.png"
+    ],
     "foto_url": "/images/produtos/iphone-13-pro.png",
     "badge": "",
     "tarja": "",
     "tags": [],
     "specs": [],
-    "variants": [{ "id": "iphone-13-pro-unico", "label": "Único", "price": 289900, "color": "", "storage": "128GB" }],
+    "variants": [
+      {
+        "id": "iphone-13-pro-128gb",
+        "label": "128GB",
+        "storage": "128GB",
+        "price": 289900,
+        "stock": null
+      },
+      {
+        "id": "iphone-13-pro-256gb",
+        "label": "256GB",
+        "storage": "256GB",
+        "price": null,
+        "stock": null
+      },
+      {
+        "id": "iphone-13-pro-512gb",
+        "label": "512GB",
+        "storage": "512GB",
+        "price": null,
+        "stock": null
+      },
+      {
+        "id": "iphone-13-pro-1tb",
+        "label": "1TB",
+        "storage": "1TB",
+        "price": null,
+        "stock": null
+      }
+    ],
     "stock": 0,
     "delivery": "",
     "lojas": [],
@@ -775,13 +1153,37 @@
     "price": 319900,
     "preco": 319900,
     "compareAt": 0,
-    "images": ["/images/produtos/iphone-13.png"],
+    "images": [
+      "/images/produtos/iphone-13.png"
+    ],
     "foto_url": "/images/produtos/iphone-13.png",
     "badge": "",
     "tarja": "",
     "tags": [],
     "specs": [],
-    "variants": [{ "id": "iphone-13-unico", "label": "Único", "price": 319900, "color": "", "storage": "128GB" }],
+    "variants": [
+      {
+        "id": "iphone-13-128gb",
+        "label": "128GB",
+        "storage": "128GB",
+        "price": 319900,
+        "stock": null
+      },
+      {
+        "id": "iphone-13-256gb",
+        "label": "256GB",
+        "storage": "256GB",
+        "price": null,
+        "stock": null
+      },
+      {
+        "id": "iphone-13-512gb",
+        "label": "512GB",
+        "storage": "512GB",
+        "price": null,
+        "stock": null
+      }
+    ],
     "stock": 0,
     "delivery": "",
     "lojas": [],
@@ -828,13 +1230,23 @@
     "price": 14990,
     "preco": 14990,
     "compareAt": 0,
-    "images": ["/images/produtos/fonte-apple-20w-original.png"],
+    "images": [
+      "/images/produtos/fonte-apple-20w-original.png"
+    ],
     "foto_url": "/images/produtos/fonte-apple-20w-original.png",
     "badge": "",
     "tarja": "",
     "tags": [],
     "specs": [],
-    "variants": [{ "id": "fonte-apple-20w-original-unico", "label": "Único", "price": 14990, "color": "", "storage": "" }],
+    "variants": [
+      {
+        "id": "fonte-apple-20w-original-unico",
+        "label": "Único",
+        "price": 14990,
+        "color": "",
+        "storage": ""
+      }
+    ],
     "stock": 0,
     "delivery": "",
     "lojas": [],
@@ -881,13 +1293,23 @@
     "price": 14990,
     "preco": 14990,
     "compareAt": 0,
-    "images": ["/images/produtos/airpods-pro.png"],
+    "images": [
+      "/images/produtos/airpods-pro.png"
+    ],
     "foto_url": "/images/produtos/airpods-pro.png",
     "badge": "",
     "tarja": "",
     "tags": [],
     "specs": [],
-    "variants": [{ "id": "airpods-pro-unico", "label": "Único", "price": 14990, "color": "", "storage": "" }],
+    "variants": [
+      {
+        "id": "airpods-pro-unico",
+        "label": "Único",
+        "price": 14990,
+        "color": "",
+        "storage": ""
+      }
+    ],
     "stock": 0,
     "delivery": "",
     "lojas": [],
